@@ -6,8 +6,8 @@
  * the new customer(s).
  */
 function takeANumber (katzDeliLine) {
-  katzDeliLine.push(katzDeliLine.length + 1);
-  return 'Welcome, you are ticket number ' + 
+  let l = katzDeliLine.push(katzDeliLine.length + 1);
+  return 'Welcome, you are ticket number ' + l;
   if (typeof newCustomer === 'string') {
     katzDeliLine.push(newCustomer);
     return 'Welcome, ' + newCustomer + '. You are number ' + katzDeliLine.length + ' in line.';
