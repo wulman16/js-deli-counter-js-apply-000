@@ -5,7 +5,9 @@
  * a string describing the line position(s) of
  * the new customer(s).
  */
-function takeANumber (katzDeliLine, newCustomer) {
+function takeANumber (katzDeliLine) {
+  katzDeliLine.push(katzDeliLine.length + 1);
+  return 'Welcome, you are ticket number ' + 
   if (typeof newCustomer === 'string') {
     katzDeliLine.push(newCustomer);
     return 'Welcome, ' + newCustomer + '. You are number ' + katzDeliLine.length + ' in line.';
