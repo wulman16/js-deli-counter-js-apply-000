@@ -6,10 +6,15 @@
  * the new customer(s).
  */
 function takeANumber (katzDeliLine) {
-  let l = katzDeliLine[katzDeliLine.length - 1];
-  let newTicketNumber = l + 1;
-  katzDeliLine.push(newTicketNumber);
-  return 'Welcome, you are ticket number ' + newTicketNumber;
+  if (katzDeliLine.length > 0) {
+    let l = katzDeliLine[katzDeliLine.length - 1];
+    let newTicketNumber = l + 1;
+    katzDeliLine.push(newTicketNumber);
+    return 'Welcome, you are ticket number ' + newTicketNumber;
+  } else {
+    katzDeliLine.push(1);
+    return 'Welcome, you are ticket number 1';
+  }
 }
   /*if (typeof newCustomer === 'string') {
     katzDeliLine.push(newCustomer);
